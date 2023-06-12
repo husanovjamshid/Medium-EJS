@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Medium</title>
+        <link rel="icon" href="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png">
+		<!-- Font Awesome -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- MDB -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/medium.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!-- Container wrapper -->
+			<div class="container">
+				<!-- Toggle button -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-mdb-toggle="collapse"
+					data-mdb-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<i class="fas fa-bars"></i>
+				</button>
+
+				<!-- Collapsible wrapper -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<!-- Navbar brand -->
+					<a class="navbar-brand mt-2 mt-lg-0" href="#">
+						<img
+							style="width: 44px"
+							class="img-fluid"
+							src="https://www.svgrepo.com/show/354057/medium-icon.svg"
+							alt=""
+						/>
+					</a>
+					<!-- Left links -->
+					<form class="input-group w-auto my-auto d-none d-sm-flex border-none">
+						<span class="input-group-text border-0 d-none d-lg-flex"
+							><i class="fas fa-search"></i
+						></span>
+						<input
+							autocomplete="off"
+							type="search"
+							class="form-control rounded border-0 search-input"
+							placeholder="Search Medium"
+							style="min-width: 125px; outline: none; border: none"
+						/>
+					</form>
+					<!-- Left links -->
+				</div>
+				<!-- Collapsible wrapper -->
+
+				<!-- Right elements -->
+				<div class="d-flex align-items-center">
+					<!-- Icon -->
+					<a class="text-reset me-3" href="/newStory">
+						<div class="d-flex align-items-center">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-label="Write"
+							>
+								<path
+									d="M14 4a.5.5 0 0 0 0-1v1zm7 6a.5.5 0 0 0-1 0h1zm-7-7H4v1h10V3zM3 4v16h1V4H3zm1 17h16v-1H4v1zm17-1V10h-1v10h1zm-1 1a1 1 0 0 0 1-1h-1v1zM3 20a1 1 0 0 0 1 1v-1H3zM4 3a1 1 0 0 0-1 1h1V3z"
+									fill="currentColor"
+								></path>
+								<path
+									d="M17.5 4.5l-8.46 8.46a.25.25 0 0 0-.06.1l-.82 2.47c-.07.2.12.38.31.31l2.47-.82a.25.25 0 0 0 .1-.06L19.5 6.5m-2-2l2.32-2.32c.1-.1.26-.1.36 0l1.64 1.64c.1.1.1.26 0 .36L19.5 6.5m-2-2l2 2"
+									stroke="currentColor"
+								></path>
+							</svg>
+							<span class="text-muted ms-2">Write</span>
+						</div>
+					</a>
+
+					<!-- Notifications -->
+					<div class="dropdown">
+						<a
+							class="text-reset me-3 dropdown-toggle hidden-arrow"
+							href="#"
+							id="navbarDropdownMenuLink"
+							role="button"
+							data-mdb-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-label="Notifications"
+							>
+								<path
+									d="M15 18.5a3 3 0 1 1-6 0"
+									stroke="currentColor"
+									stroke-linecap="round"
+								></path>
+								<path
+									d="M5.5 10.53V9a6.5 6.5 0 0 1 13 0v1.53c0 1.42.56 2.78 1.57 3.79l.03.03c.26.26.4.6.4.97v2.93c0 .14-.11.25-.25.25H3.75a.25.25 0 0 1-.25-.25v-2.93c0-.37.14-.71.4-.97l.03-.03c1-1 1.57-2.37 1.57-3.79z"
+									stroke="currentColor"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+							<span class="badge rounded-pill badge-notification bg-danger">1</span>
+						</a>
+						<ul
+							class="dropdown-menu dropdown-menu-end"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<li>
+								<a class="dropdown-item" href="#">Some news</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Another news</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Avatar -->
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle d-flex align-items-center hidden-arrow"
+							href="#"
+							id="navbarDropdownMenuAvatar"
+							role="button"
+							data-mdb-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<img
+								src=<%= user.photos[0].value %>
+								class="rounded-circle ms-3"
+                                width="32"
+								height="32"
+								alt="Black and White Portrait of a Man"
+								loading="lazy"
+							/>
+						</a>
+						<ul
+							class="dropdown-menu dropdown-menu-end"
+							aria-labelledby="navbarDropdownMenuAvatar"
+						>
+							<li>
+								<a class="dropdown-item" href="#">My profile</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Settings</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Right elements -->
+			</div>
+			<!-- Container wrapper -->
+		</nav>
+		<!-- Navbar -->
+		<div class="container mt-5">
+			<div class="row">
+				<!-- left side start -->
+				<div class="col-sm-7 col-7 order-2 order-sm-1 ml-5 ml-sm-0">
+						
+					<% for(post of posts) {%>
+						<div class="row  mt-3 mt-sm-2">
+							<div class="col-sm-8 col-8">
+								<div class="row ">
+									<div class="col-sm-1 col-1 mt-1">
+										<img
+										  src="<%= post.avatar %>"
+										  width="25"
+										  height="25"
+										  class="rounded-circle"
+										  alt=""
+										  srcset=""
+										/>
+									  </div>
+									  <div class="col-sm-5 col-6 pl-4  pt-sm-1 pl-sm-3">
+										<p class="post-author"><%= post.first_name + ' ' + post.last_name %> </p>
+
+										
+									  </div>
+								</div>
+								<div class="mt-1">
+									<h5 class="post-title"><strong> <%= post.title %> </strong></h5>
+								</div>
+								<div>
+									<h6 class='post-desc d-none d-sm-block'>
+									  <%= post.body %>
+									</h6>
+								</div>
+								<div class="row text-black-50 mt-2 pt-1 ">
+									<ul class="list-inline small col-sm-10 d-none d-sm-block">
+										<li class="list-inline-item">Mar 12</li>
+										<li class="list-inline-item">	&#8226</li>
+										<li class="list-inline-item">3 Min Read</li>
+									</ul>
+									<div class="col-sm-2 pl-4 d-none d-sm-block">
+										<i class="far fa-bookmark fa-lg"></i>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 col-2 ">
+								<img width="112" height="112" src= "http://localhost:5000/uploads/<%= post.image %>" />
+							</div>
+						</div>
+					<% } %>
+				
+				</div>
+				<!-- left side end -->
+	
+				<!-- right side start-->
+				<div class="col-sm-5 order-1 order-sm-2">
+					<h6 class="ml-5"> <small><strong>DISCOVER MORE OF WHAT MATTERS TO YOU</strong></small>
+					</h6>
+					<ul class="list-inline ml-5 mt-3">
+						<li class="list-inline-item mt-1">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark ">Self</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Programming</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Data Science</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Productivy</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Software</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Web Development</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Politics</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">JavaScript</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Machine Learning</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Health</a>
+						</li>
+						<li class="list-inline-item mt-2">
+							<a href="#" class="btn btn-sm btn-outline-secondary hover-dark">Fashion</a>
+						</li>
+					  </ul>
+					  <div>
+						<h6 class="ml-5 text-success p-1 pb-4 border-bottom "> <small>See all topics.</small>
+						</h6>
+					  </div>
+				</div>
+				 <!-- right side end -->
+			</div>
+		</div>
+		<!-- MDB -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+        <script src="/js/home.js"></script>
+	</body>
+</html>
